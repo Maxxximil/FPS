@@ -23,9 +23,9 @@ public class WanderingAI : MonoBehaviour
         {
             transform.Translate(0, 0, speed * Time.deltaTime);
 
-            Ray ray = new Ray(transform.position, transform.forward);//Луч находится в том же положении и нацеливается в том же направлении что и персонаж
+            Ray ray = new Ray(transform.position, transform.forward);
             RaycastHit hit;
-            if (Physics.SphereCast(ray, 0.75f, out hit))//Бросание луча с описаннной вокруг него окружностью
+            if (Physics.SphereCast(ray, 0.75f, out hit))
             {
                 GameObject hitObject = hit.transform.gameObject;
 
@@ -42,7 +42,7 @@ public class WanderingAI : MonoBehaviour
 
                 else if (hit.distance < obstacleRange)
                 {
-                    float angle = Random.Range(-110, 110);//Поворот с наполовину случайным выбором нового направления
+                    float angle = Random.Range(-110, 110);
                     transform.Rotate(0, angle, 0);
                 }
             }

@@ -12,7 +12,7 @@ public class Fireball : MonoBehaviour
         transform.Translate(0, 0, speed * Time.deltaTime);
     }
 
-    private void OnTriggerEnter(Collider other)//Эта функция вызывается когда с триггером сталкивается другой объект
+    private void OnTriggerEnter(Collider other)
     {
         PlayerCharacter player = other.GetComponent<PlayerCharacter>();
         if (player != null)

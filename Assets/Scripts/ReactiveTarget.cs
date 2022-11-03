@@ -7,7 +7,7 @@ public class ReactiveTarget : MonoBehaviour
     public void ReactToHit()
     {
         WanderingAI behavior = GetComponent<WanderingAI>();
-        if (behavior != null)//проверка присоединен ли сценарий WanderingAI
+        if (behavior != null)
         {
             behavior.SetAlive(false);
         }
